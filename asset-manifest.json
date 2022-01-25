@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/ExchangeRateCalculator/static/js/main.f6294e17.js",
+    "index.html": "/ExchangeRateCalculator/index.html",
+    "main.f6294e17.js.map": "/ExchangeRateCalculator/static/js/main.f6294e17.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f6294e17.js"
+  ]
+}
