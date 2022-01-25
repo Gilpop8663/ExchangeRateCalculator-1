@@ -1,5 +1,5 @@
 # 배포 주소
-<a href="https://github.com/ysh0514">환율 계산기 사이트</a>
+<a href="http://wanted-14-01.s3-website.ap-northeast-2.amazonaws.com/">환율 계산기 사이트</a>
 
 # 프로젝트 구조 설명
 
@@ -83,10 +83,9 @@ src
 	
  
  <div align="center"}>
-<img width="70%" src="https://user-images.githubusercontent.com/80146176/151014532-9a1d8f7c-55f1-43cd-9e6d-5a14da9cdf1b.gif"/>
-<img width="70%" src="https://user-images.githubusercontent.com/80146176/151014542-3a12f259-059e-4ca1-83b4-ac207ff029e9.gif"/>
+<img width="50%" src="https://user-images.githubusercontent.com/80146176/151019259-1d64996c-1545-4ed1-bba8-f17ebd98e1a2.gif"/>
+<img width="50%" src="https://user-images.githubusercontent.com/80146176/151019244-74904595-a0ce-47e2-90ed-4f401b801c77.gif"/>
 </div>
-
 
 
 
