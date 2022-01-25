@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { HttpUtil } from "../utils";
 
-export default function useFetch (params) {
-  const [requestParams, setRequestParams] = useState(params);
+export default function useFetch(params) {
+  const [requestParams] = useState(params);
   const [isFetching, setIsFetching] = useState(true);
   const [response, setResponse] = useState(null);
 
@@ -12,11 +12,10 @@ export default function useFetch (params) {
       setIsFetching(false);
       const { msg, data } = res;
 
-      if (!!msg)
-        return;
+      if (!!msg) return;
 
       setResponse(data.quotes);
-    }
+    };
     getData();
   }, [requestParams]);
 
