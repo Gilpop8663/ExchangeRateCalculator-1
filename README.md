@@ -1,7 +1,7 @@
 # 배포 주소
 <a href="https://github.com/ysh0514">환율 계산기 사이트</a>
 
-## 프로젝트 구조 설명
+# 프로젝트 구조 설명
 
 src  
  ┣ hooks  
@@ -25,7 +25,9 @@ src
  ┣ Router.js  
  ┗ index.js  
 
+# 프로젝트 시작방법
 
+	npm install / npm start
 
 # 과제 구현 목록
 
@@ -76,6 +78,8 @@ src
 	상단 드롭 다운에서 선택한 환율은 하단 탭에서 제거되고 그 자리에 기존의 환율이 배치되도록 구현.
 	
 	사용자의 수치 입력 혹은 상단 드롭다운 메뉴를 이용하여 통화 변경 시 변경될 환율과 기준일 정보가 동기화 되도록 구현.
+	
+	입력 길이 9자 제한.
 	
  
  <div align="center"}>
@@ -145,10 +149,3 @@ it('숫자가 아닐 경우', () => {
 ![image](https://user-images.githubusercontent.com/80146176/151011873-39589da6-a79c-4dbc-a407-a21a76a9cc0b.png)
 
 
-
-
-
-
-
- 
- ## 영상 (gif)넣을것
