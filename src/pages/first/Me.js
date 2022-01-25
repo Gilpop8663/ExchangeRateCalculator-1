@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { Util } from "../../utils";
-import { useFetch } from "../../hooks";
 
 const Wrapper = styled.div`
-  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Title = styled.h1`
@@ -49,12 +52,21 @@ const InputMoney = styled.input.attrs({ type: "number", min: 0, max: 10000 })`
   margin: 8px;
 `;
 
+const Box = styled.div`
+  color: blue;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 200px;
+`;
+
 export default function Me() {
   const [userInput, setUserInput] = useState(0);
   const [money, setMoney] = useState(0);
   const [engCountry, setEngCountry] = useState("KRW");
   const [value, setValue] = useState("한국");
   const [result, setResult] = useState(0);
+  const navigate = useNavigate();
   const response = async () => {
     await fetch(
       `http://api.currencylayer.com/live?access_key=7c8107b6d3d9494815b4ebb578f5b368&format=1`
@@ -73,6 +85,10 @@ export default function Me() {
           setMoney(data.quotes.USDPHP);
         }
       });
+  };
+
+  const navigateClick = () => {
+    navigate("/second");
   };
 
   const onInputChange = ({ target: { value } }) => {
@@ -102,7 +118,14 @@ export default function Me() {
   }, [value]);
   return (
     <Wrapper>
-      <Title>환율 계산</Title>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <Title style={{ marginRight: "20px" }}>환율 계산</Title>
+      </div>
       <SubTitle>송금국가: 미국(USD)</SubTitle>
       <ReceptionCountry>
         <SubTitle htmlFor="country">수취국가: </SubTitle>
@@ -113,7 +136,7 @@ export default function Me() {
         </SelectCountry>
       </ReceptionCountry>
       <ContentText>{`환율: ${money} ${engCountry}/ USD`}</ContentText>
-      <InputFormWrapper onChange={onSubmit}>
+      <InputFormWrapper onSubmit={onSubmit}>
         <SubTitle htmlFor="money">송금액: </SubTitle>
         <InputMoney
           type="number"
@@ -126,7 +149,10 @@ export default function Me() {
         <ContentText>USD</ContentText>
         <button type="submit">Submit</button>
       </InputFormWrapper>
-      <ContentText>{`수취 금액은 ${result} 입니다.`}</ContentText>
+      {result !== "0.00" && result !== 0 ? (
+        <ContentText>{`수취 금액은 ${result} 입니다.`}</ContentText>
+      ) : null}
+      <Box onClick={navigateClick}>두번째 페이지 링크</Box>
     </Wrapper>
   );
 }
