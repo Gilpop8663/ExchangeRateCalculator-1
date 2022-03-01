@@ -1,5 +1,8 @@
-# 배포 주소
-<a href="http://wanted-14-01.s3-website.ap-northeast-2.amazonaws.com/">환율 계산기 사이트</a>
+## 배포 주소
+## <a href="http://wanted-14-01.s3-website.ap-northeast-2.amazonaws.com/">환율 계산기 사이트</a>
+
+## 회고록
+## <a href="https://hell-of-company-builder.tistory.com/252?category=921712">블로그 회고록</a>
 
 # 프로젝트 구조 설명
 
